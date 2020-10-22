@@ -27,6 +27,8 @@ type t = {
 (* For ordinary tests not to fault, the dirty bit has to be set. *)
 let default s =
   { oa=Misc.add_physical s; valid=1; af=1; db=1; dbm=0; }
+let of_pte s =
+  { oa=Misc.add_pte s; valid=1; af=1; db=1; dbm=0; }
 
 let is_default t = t.valid=1 && t.af=1 && t.db=1 && t.dbm=0
 

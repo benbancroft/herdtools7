@@ -26,6 +26,10 @@ type t = {
 
 (* Default value for location argument *)
 val default : string -> t
+
+(* Value for pte argument *)
+val of_pte : string -> t
+
 (* Flags have default values *)
 val is_default : t -> bool
 val of_list : string -> (string * string) list -> t
